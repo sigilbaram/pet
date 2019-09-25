@@ -11,16 +11,28 @@ Provides information about the player's pet.
 - **hp_percent**
 - **mp_percent**
 - **tp**
-- **active**: true is pet is active (logic might need further refinement)
+- **active**: true if a pet is active (logic might need further refinement)
 - **automaton**: A table containing automaton specific information
 
 ## Automaton Table
 - **head**
+ - **raw**: unmodified value
+ - **item_id**: `raw` + 0x2000
+ - **item**: From `client_data`
 - **frame**
-- **attachments**
-- **available_heads**
-- **available_frames**
-- **available_attach**
+ - **raw**: unmodified value
+ - **item_id**: `raw` + 0x2000
+ - **item**: From `client_data`
+- **attachments**: Array from 0 to 11 of the following type:
+ - **raw**: unmodified value
+ - **item_id**: `raw` + 0x2100
+ - **item**: From `client_data`
+ - **heads_available[item_id]**
+ - **frames_available[item_id]**
+ - **attach_available[item_id]**
+- **available_heads[i]**: Original index. Offset from `item_id` by 0x2000
+- **available_frames[i]**: Original index. Offset from `item_id` by 0x2020
+- **available_attach[i]**:Original index.  Offset from `item_id` by 0x2100
 - **name**
 - **hp**
 - **hp_max**
@@ -33,20 +45,16 @@ Provides information about the player's pet.
 - **magic**
 - **magic_max**
 - **str**
-- **str_max**
+- **str_modifier**
 - **dex**
-- **dex_max**
+- **dex_modifier**
 - **vit**
-- **vit_max**
+- **vit_modifier**
 - **agi**
-- **agi_max**
+- **agi_modifier**
 - **int**
-- **int_max**
+- **int_modifier**
 - **mnd**
-- **mnd_max**
+- **mnd_modifier**
 - **chr**
-- **chr_max**
-
-## To Do
-- Provide access to automoton heads/frames/attachments
-- Provide access to other automoton stats (melee, range, magic, str, dex, etc)
+- **chr_modifier**
