@@ -27,9 +27,9 @@ Provides information about the player's pet.
  - **raw**: unmodified value
  - **item_id**: `raw` + 0x2100
  - **item**: From `client_data`
- - **heads_available[item_id]**
- - **frames_available[item_id]**
- - **attach_available[item_id]**
+- **heads_available[item_id]**
+- **frames_available[item_id]**
+- **attach_available[item_id]**
 - **available_heads[i]**: Original index. Offset from `item_id` by 0x2000
 - **available_frames[i]**: Original index. Offset from `item_id` by 0x2020
 - **available_attach[i]**:Original index.  Offset from `item_id` by 0x2100
