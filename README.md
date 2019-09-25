@@ -16,17 +16,17 @@ Provides information about the player's pet.
 
 ## Automaton Table
 - **head**
- - **raw**: unmodified value
- - **item_id**: `raw` + 0x2000
- - **item**: From `client_data`
+  - **raw**: unmodified value
+  - **item_id**: `raw` + 0x2000
+  - **item**: From `client_data`
 - **frame**
- - **raw**: unmodified value
- - **item_id**: `raw` + 0x2000
- - **item**: From `client_data`
+  - **raw**: unmodified value
+  - **item_id**: `raw` + 0x2000
+  - **item**: From `client_data`
 - **attachments**: Array from 0 to 11 of the following type:
- - **raw**: unmodified value
- - **item_id**: `raw` + 0x2100
- - **item**: From `client_data`
+  - **raw**: unmodified value
+  - **item_id**: `raw` + 0x2100
+  - **item**: From `client_data`
 - **heads_available[item_id]**
 - **frames_available[item_id]**
 - **attach_available[item_id]**
